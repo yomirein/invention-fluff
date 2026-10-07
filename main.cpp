@@ -3,11 +3,8 @@
 using namespace std;
 
 int factorial(int x) {
-    int res = 0;
-    for (int i = 0; i < x; i++) {
-        res *= i;
-    }
-    return res;
+    cout << "CRITICAL BUG!" << endl;
+    return 0;
 }
 
 int main() {
