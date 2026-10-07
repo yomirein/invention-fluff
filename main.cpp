@@ -3,11 +3,26 @@
 using namespace std;
 
 int factorial(int x) {
-    cout << "CRITICAL BUG!" << endl;
-    return 0;
+    long res = 1;
+    for (int i = 1; i <= x; ++i)
+    {
+        res *= i;
+    }
+    return res;
+}
+
+double findE(int steps) {
+    double e = 1.0;
+    for (int i = 1; i <= steps; ++i)
+    {
+        e += 1.0 / factorial(i);
+    }
+    return e;
 }
 
 int main() {
-    int res = factorial(20);
-    cout << "Result: " << res << endl;
+    int resF = factorial(10);
+    double resE = findE(10);
+    cout << "Result f: " << resF << endl;
+    cout << "Result E: " << resE << endl;
 }
